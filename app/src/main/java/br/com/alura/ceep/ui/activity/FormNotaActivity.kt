@@ -113,8 +113,9 @@ class FormNotaActivity : AppCompatActivity() {
         lifecycleScope.launch {
             notaId?.let { id ->
                 repository.remove(id)
+                finish()
             }
-            finish()
+
         }
     }
 
